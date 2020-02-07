@@ -32,3 +32,38 @@ dev_dependencies:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+# Git hooks example
+```
+#!/bin/sh
+# Template from https://gist.github.com/miquelbeltran/56b7e276f8209c46bc39644b82018587
+# To use add to `.git/hooks/`
+# Should be named `pre-push`
+# Make executable with `chmod +x`
+
+# stash any unstaged changes
+git stash -q --keep-index
+
+# run Flutter analyze + test
+flutter analyze
+
+if [ $? -ne 0 ]; then
+        # unstash the unstashed changes
+        git stash pop -q
+        exit 1
+fi
+
+flutter test
+
+
+if [ $? -ne 0 ]; then
+        # unstash the unstashed changes
+        git stash pop -q
+        exit 1
+fi
+
+# unstash the unstashed changes
+git stash pop -q
+exit 0
+```
