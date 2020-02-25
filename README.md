@@ -1,4 +1,5 @@
 # mobx_test
+![Flutter tests](https://github.com/ThiagoFontes/mobx_test/workflows/Flutter%20tests/badge.svg?branch=master)
 
 A new Flutter project.
 
