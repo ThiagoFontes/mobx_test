@@ -1,6 +1,8 @@
 # mobx_test
 ![Flutter tests](https://github.com/ThiagoFontes/mobx_test/workflows/Flutter%20tests/badge.svg?branch=master)
 
+[![Codemagic build status](https://api.codemagic.io/apps/5f182d049514cc49838d5773/5f182d049514cc49838d5772/status_badge.svg)](https://codemagic.io/apps/5f182d049514cc49838d5773/5f182d049514cc49838d5772/latest_build)
+
 A new Flutter project.
 
 ## Getting Started
